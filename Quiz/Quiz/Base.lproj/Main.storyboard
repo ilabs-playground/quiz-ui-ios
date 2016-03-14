@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="v1R-kG-ll8">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,70 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Your Quiz!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fi-5T-Xri">
+                                <rect key="frame" x="213" y="32" width="174" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.011764705882352941" green="0.011764705882352941" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdU-Gq-bzq">
+                                <rect key="frame" x="551" y="26" width="41" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="0.0" green="0.46274509803921571" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="U1X-SI-uYa">
+                                <rect key="frame" x="10" y="64.5" width="580" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                </segments>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jfC-A7-Ukj">
+                                <rect key="frame" x="0.0" y="104.5" width="600" height="495.5"/>
+                                <color key="backgroundColor" red="0.31372549019607843" green="0.8901960784313725" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9Fi-5T-Xri" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="32" id="Btr-VT-zkA"/>
+                            <constraint firstAttribute="trailing" secondItem="U1X-SI-uYa" secondAttribute="trailing" constant="10" id="L1p-vM-vef"/>
+                            <constraint firstItem="U1X-SI-uYa" firstAttribute="top" secondItem="9Fi-5T-Xri" secondAttribute="bottom" constant="12" id="OnT-n0-thI"/>
+                            <constraint firstItem="jfC-A7-Ukj" firstAttribute="top" secondItem="U1X-SI-uYa" secondAttribute="bottom" constant="12" id="Tua-bx-rPq"/>
+                            <constraint firstAttribute="trailing" secondItem="DdU-Gq-bzq" secondAttribute="trailing" constant="8" id="XIH-w2-jis"/>
+                            <constraint firstItem="9Fi-5T-Xri" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bDO-h8-Y8o"/>
+                            <constraint firstItem="9Fi-5T-Xri" firstAttribute="centerX" secondItem="U1X-SI-uYa" secondAttribute="centerX" id="duq-Ax-ZaD"/>
+                            <constraint firstAttribute="trailing" secondItem="jfC-A7-Ukj" secondAttribute="trailing" id="lh1-Ue-BJN"/>
+                            <constraint firstItem="U1X-SI-uYa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="s2V-3W-oNc"/>
+                            <constraint firstAttribute="bottom" secondItem="jfC-A7-Ukj" secondAttribute="bottom" id="seR-Z5-twF"/>
+                            <constraint firstItem="DdU-Gq-bzq" firstAttribute="centerY" secondItem="9Fi-5T-Xri" secondAttribute="centerY" id="wJr-AL-iRs"/>
+                            <constraint firstItem="jfC-A7-Ukj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ygF-LK-BVM"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="egr-7H-Fom">
+            <objects>
+                <viewController id="v1R-kG-ll8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SAj-uM-gdK"/>
+                        <viewControllerLayoutGuide type="bottom" id="fDb-Sr-Uvg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W8g-Wc-Cuy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kl4-dE-g8R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1253" y="389"/>
         </scene>
     </scenes>
 </document>
