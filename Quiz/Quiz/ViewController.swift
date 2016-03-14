@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+	@IBOutlet weak var percentageLabel: UILabel!
+	var percentage = 69
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -20,6 +22,16 @@ class ViewController: UIViewController {
 		// Dispose of any resources that can be recreated.
 	}
 
+	@IBAction func lowerPercentage(sender: AnyObject) {
+		if percentage > 0 {
+			percentageLabel.text = "\(--percentage)%"
+		}
+	}
 
+	@IBAction func upPercentage(sender: AnyObject) {
+		if percentage < 100 {
+			percentageLabel.text = "\(++percentage)%"
+		}
+	}
 }
 

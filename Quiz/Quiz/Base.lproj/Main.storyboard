@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -67,7 +67,7 @@
         <!--View Controller-->
         <scene sceneID="egr-7H-Fom">
             <objects>
-                <viewController id="v1R-kG-ll8" sceneMemberID="viewController">
+                <viewController id="v1R-kG-ll8" customClass="ViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SAj-uM-gdK"/>
                         <viewControllerLayoutGuide type="bottom" id="fDb-Sr-Uvg"/>
@@ -105,6 +105,9 @@
                                 <state key="normal" title="+">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="upPercentage:" destination="v1R-kG-ll8" eventType="touchUpInside" id="5CS-uC-dde"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqU-NE-vIq" userLabel="ArrowRight">
                                 <rect key="frame" x="351.5" y="37" width="12.5" height="20"/>
@@ -151,6 +154,9 @@
                                 <state key="normal" title="-">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="lowerPercentage:" destination="v1R-kG-ll8" eventType="touchUpInside" id="8DK-O9-6zB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2Z-Qb-5cd" userLabel="icon2">
                                 <rect key="frame" x="176.5" y="586" width="22" height="32"/>
@@ -210,6 +216,9 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="percentageLabel" destination="KkX-EA-lFV" id="O23-KM-bdG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kl4-dE-g8R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
